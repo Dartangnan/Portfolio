@@ -439,3 +439,14 @@
 .st0p {
   fill: #4d4472;
 }
+
+/* ---------- BUBBLES ABOUT ME SVG STYLE ------------ */
+
+.st0bbl {
+  opacity: 0.98;
+  fill: url(#XMLID_17_);
+}
+.st1bbl {
+  opacity: 0.98;
+  fill: url(#XMLID_18_);
+}

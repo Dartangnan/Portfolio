@@ -42,7 +42,7 @@ nav {
 }
 
 .nav-items li:hover hr {
-  width: 100%;
+  width: 120%;
   opacity: 1;
   transition: width 1s;
 }
@@ -149,6 +149,7 @@ nav {
   margin-top: 45px;
   display: flex;
   justify-content: center;
+  padding-left: 35px;
 }
 
 .home-item {
@@ -161,8 +162,99 @@ nav {
 }
 
 .icons-desc {
+  text-align: center;
   font-family: Comfortaa;
   margin-top: 15px;
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-= ABOUT ME =-=-=-=-=-=-=-=-=-=-=- */
+
+#about-me {
+  margin-top: 100px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-me-title {
+  display: flex;
+  justify-content: center;
+  color: #4d4472;
+  font-family: "Comfortaa";
+  font-size: 40px;
+  margin-bottom: 100px;
+}
+
+.about-me-content {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.about-me-bg {
+  position: absolute;
+  width: 100%;
+  min-width: 250px;
+  max-width: 600px;
+}
+
+.about-me-text {
+  position: relative;
+  width: 45%;
+  display: grid;
+  place-items: center;
+}
+.vertical-line {
+  width: 1px;
+  border-right: 1px solid grey;
+  margin: 0 15px;
+}
+
+.tech-icons {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 35%;
+  padding: 10px 5%;
+}
+
+.icon-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.icon-images img {
+  width: 90px;
+  margin: 35px 40px;
+}
+
+.upper-bubbles {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lower-bubble {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.text-container {
+  position: relative;
+  z-index: 5;
+  font-family: "Comfortaa";
+  width: 275px;
+  font-size: 16px;
+  text-align: justify;
+  text-indent: 25px;
+  background: rgb(255, 255, 255);
+  color: rgb(80, 80, 80);
+  padding: 35px;
+  box-shadow: 0px 0px 15px 5px rgba(22, 22, 22, 0.274);
+}
