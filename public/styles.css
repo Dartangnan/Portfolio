@@ -208,8 +208,9 @@ nav {
 }
 .vertical-line {
   width: 1px;
-  border-right: 1px solid grey;
-  margin: 0 15px;
+  border-right: 1px solid rgb(172, 172, 172);
+  margin: 0 45px;
+  min-height: 400px;
 }
 
 .tech-icons {
@@ -297,7 +298,7 @@ nav {
   display: flex;
   flex-flow: column;
   justify-content: space-around;
-  width: 50%;
+  width: 70%;
 }
 
 .single-project-left {
@@ -371,4 +372,96 @@ nav {
 
 .project-image img {
   width: 275px;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-= CONTACT ME =-=-=-=-=-=-=-=-=-=-=- */
+
+#contact-me {
+  background: linear-gradient(#1e1a44, #453160);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.contact-me-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  font-family: Comfortaa;
+  width: 80%;
+}
+
+.inner-form-container {
+  background: white;
+  padding: 70px 50px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.form-title {
+  font-size: 30px;
+  color: #4d4472;
+  margin: 0 25px 60px;
+  font-family: Comfortaa;
+}
+
+.form-item {
+  margin: 0 0 25px;
+  display: flex;
+  flex-flow: column;
+}
+
+.form-item input {
+  width: 100%;
+  font-family: Comfortaa;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid grey;
+  font-size: 16px;
+  margin-top: 10px;
+  background-color: rgba(143, 143, 143, 0.185);
+}
+
+textarea {
+  border-radius: 25px;
+  margin-top: 26px;
+  text-indent: 25px;
+  padding: 5px;
+  text-align: justify;
+  font-family: Comfortaa;
+  line-height: 1.6;
+  font-size: 16px;
+  outline: none;
+}
+
+.send-btn {
+  font-family: Comfortaa;
+  padding: 10px 25px;
+  margin-top: 20px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #4d4472;
+  /* border: none; */
+  border-radius: 25px;
+  border: 1px solid #4d4472;
+}
+
+.send-btn:hover {
+  background: #4d4472;
+  color: white;
+  font-weight: bold;
+}
+
+.social-link {
+  color: rgba(255, 255, 255, 0.705);
+  font-size: 24px;
+  margin: 30px 0;
+}
+
+.social-link .fab,
+.fas {
+  margin-right: 15px;
 }
