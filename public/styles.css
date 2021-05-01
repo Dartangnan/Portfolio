@@ -1,7 +1,12 @@
 /* -=-=-=-=-=-=-=-=-=-=-= GENERAL INFO =-=-=-=-=-=-=-=-=-=-=- */
-* {
+*,
+html {
   margin: 0;
   padding: 0;
+}
+
+.mobile {
+  display: none;
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-= NAV BAR =-=-=-=-=-=-=-=-=-=-=- */
@@ -507,85 +512,106 @@ textarea {
   .vertical-line {
     border: none;
   }
+
+  #about-me {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .home-upper-container {
+    background: url("/public/portifolio_bg_mobile.png") no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-clip: content-box;
+    height: 80vh;
+    min-height: 600px;
+    width: 100vw;
+    overflow: show;
+  }
 }
 
 @media only screen and (max-width: 700px) {
+  /* -=-=-=-=-=-=-=-=-=-=-= HOME PAGE UPPER SECTION =-=-=-=-=-=-=-=-=-=-=- */
+
+  #home {
+    padding: 0;
+  }
+
+  .home-upper-container {
+    background: url("/public/portifolio_bg_mobile.png") no-repeat;
+    background-size: cover;
+    /* background-size: 100%; */
+
+    background-position: 50%;
+    background-clip: content-box;
+    height: 80vh;
+    min-height: 700px;
+    width: 100vw;
+    overflow: show;
+  }
+
+  .floating-items {
+    width: 80%;
+    padding-top: 80px;
+    z-index: 5;
+  }
+
+  .home-main-text {
+    font-size: 32px;
+    margin-bottom: -8%;
+  }
+
+  .job-title-home {
+    font-size: 15px;
+    color: #ddc2dfbb;
+  }
+
+  .hello-word-home {
+    color: #f9aafd;
+  }
+  .self-portrait {
+    margin-bottom: -15px;
+  }
+
+  /* -=-=-=-=-=-=-=-=-=-=-= HOME PAGE LOWER SECTION =-=-=-=-=-=-=-=-=-=-=- */
+
+  .home-lower-container {
+    margin-top: 45px;
+    padding-left: 0px;
+  }
+
+  .home-item {
+    padding: 0 25px;
+  }
+
+  .home-item {
+    width: 45px;
+  }
+
+  .icons-desc {
+    text-align: center;
+    font-family: Comfortaa;
+    margin-top: 15px;
+  }
+
   /* -=-=-=-=-=-=-=-=-=-=-= ABOUT ME =-=-=-=-=-=-=-=-=-=-=- */
 
   #about-me {
     padding: 80px 0 50px;
+    overflow: hidden;
   }
 
   .about-me-bg {
     position: relative;
-    /* width: 100%; */
     margin-left: -100px;
     min-width: 350px;
     max-width: 600px;
   }
 
-  .about-me-text {
-    position: relative;
-    width: 45%;
-    display: grid;
-    place-items: center;
-  }
-  .vertical-line {
-    width: 1px;
-    border-right: 1px solid rgb(172, 172, 172);
-    margin: 0 45px;
-    min-height: 400px;
-  }
-
-  .tech-icons {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 35%;
-    padding: 10px 5%;
-    min-width: 350px;
-  }
-
-  .icon-images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  .icon-images img {
-    width: 90px;
-    margin: 35px 40px;
-  }
-
-  .upper-bubbles {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .lower-bubble {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
-
   .text-container {
-    position: absolute;
-    z-index: 5;
-    font-family: "Comfortaa";
-    width: 350px;
-    font-size: 16px;
-    text-align: justify;
-    text-indent: 25px;
-    /* background: linear-gradient(to bottom right, #8266a3d7, #2d2368d7); */
-    color: rgb(78, 78, 78);
-    padding: 35px 55px;
-    /* border-radius: 50px; */
-    border-end-end-radius: 0;
-    /* box-shadow: 0px 0px 15px 0px rgba(22, 22, 22, 0.274); */
+    width: 300px;
+    text-indent: 45px;
   }
 
   /* -=-=-=-=-=-=-=-=-=-=-= PROJECTS =-=-=-=-=-=-=-=-=-=-=- */
@@ -603,6 +629,7 @@ textarea {
   }
 
   .single-project-right {
+    align-self: center;
     align-items: flex-end;
     border: none;
     padding-left: 0px;
@@ -664,11 +691,99 @@ textarea {
   .about-me-content {
     justify-content: center;
   }
-  #about-me {
+  /* -=-=-=-=-=-=-=-=-=-=-= CONTACT ME =-=-=-=-=-=-=-=-=-=-=- */
+
+  #contact-me {
     overflow: hidden;
+    padding: 150px 0 50px;
   }
-  #contact-me,
-  #home,
+
+  .contact-me-container {
+    width: 100%;
+  }
+
+  .outer-form-container {
+    padding: 35px 0;
+    margin-left: 0;
+    margin: 0 15px 0;
+  }
+
+  .inner-form-container {
+    padding: 50px 15px 50px 15px;
+    border-radius: 25px;
+  }
+
+  .form-title {
+    text-align: center;
+  }
+  .form-item input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  textarea {
+    width: 97%;
+  }
+
+  .send-btn {
+    font-size: 20px;
+  }
+
+  .social-link {
+    color: rgba(255, 255, 255, 0.705);
+    font-size: 18px;
+    font-weight: lighter;
+    margin: 50px 0 30px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .social-link .fab,
+  .fas {
+    margin-right: 0;
+    margin-bottom: 15px;
+    font-size: 40px;
+  }
+
+  .project-footer {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin: 25px 0 -10px -10px;
+    margin-bottom: 80px;
+  }
+
+  .project-footer img {
+    width: 30%;
+    opacity: 0.55;
+    min-width: 250px;
+  }
+
+  .down {
+    transform: rotate(180deg);
+  }
+
+  .bttm-form-img {
+    position: absolute;
+    bottom: -50px;
+    right: -80px;
+  }
+
+  .top-form-img {
+    position: absolute;
+    top: -50px;
+    left: -100px;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
   nav {
     display: none;
   }
