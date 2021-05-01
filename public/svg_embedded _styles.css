@@ -464,3 +464,112 @@
 .st3pj {
   fill: none;
 }
+
+.st0 {
+  fill: linear-gradient(#1e1a44, #453160);
+}
+
+/* ---------- SATELITE SVG STYLE ------------ */
+
+.st0st {
+  fill: #6d32ba;
+  stroke: #172b3f;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+}
+.st1st {
+  fill: #6398f7;
+}
+.st2st {
+  fill: #6d6d6d;
+  stroke: #172b3f;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+}
+.st3st {
+  fill: #547ac6;
+  stroke: #172b3f;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+}
+.st4st {
+  fill: #ea4b4b;
+  stroke: #172b3f;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+}
+.st5st {
+  fill: #b7b7b7;
+  stroke: #172b3f;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+}
+.st6st {
+  opacity: 0.25;
+  fill: #efefef;
+}
+.st7st {
+  opacity: 0.31;
+  fill: #172b3f;
+}
+.st8st {
+  fill: #172b3f;
+}
+.st9st {
+  fill: #4583dd;
+}
+.st10st {
+  fill: #235591;
+}
+.st11st {
+  fill: none;
+  stroke: #172b3f;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+}
+.st12st {
+  fill: #5e2adb;
+  stroke: #172b3f;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+}
+.st13st {
+  opacity: 0.21;
+  fill: #172b3f;
+}
+.st14st {
+  opacity: 0.33;
+  fill: #172b3f;
+}
+.st15st {
+  opacity: 0.33;
+  fill: #f9f9f9;
+}
+.st16st {
+  fill: #7070e0;
+  stroke: #172b3f;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+}
+.st17st {
+  fill: #383349;
+  stroke: #172b3f;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+}
+.st18st {
+  opacity: 0.25;
+  fill: #414142;
+}
+.st19st {
+  opacity: 0.35;
+  fill: #414142;
+}
+.st20st {
+  opacity: 0.43;
+  fill: #414142;
+}
+.st21st {
+  opacity: 0.26;
+  fill: #e5e5e5;
+}
