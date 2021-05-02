@@ -443,14 +443,31 @@
 /* ---------- BUBBLES ABOUT ME SVG STYLE ------------ */
 
 .st0bbl {
-  opacity: 0.98;
-  fill: url(#XMLID_17_);
+  fill: #e3e2e8;
 }
 .st1bbl {
-  opacity: 0.98;
-  fill: url(#XMLID_18_);
+  fill: none;
+  stroke: #776cb7;
+  stroke-miterlimit: 10;
 }
-
+.st2bbl {
+  fill: none;
+  stroke: #cac7dd;
+  stroke-miterlimit: 10;
+}
+.st0bbl2 {
+  fill: #e3e2e8;
+}
+.st1bbl2 {
+  fill: none;
+  stroke: #776cb7;
+  stroke-miterlimit: 10;
+}
+.st2bbl2 {
+  fill: none;
+  stroke: #cac7dd;
+  stroke-miterlimit: 10;
+}
 /* ---------- PROJECT LINKS SVG STYLE ------------ */
 .st0pj {
   fill: #4d4472;
