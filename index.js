@@ -4,7 +4,10 @@ const navItems = document.querySelectorAll(".nav-items");
 const homeNavIcons = document
   .querySelector(".home-lower-container")
   .querySelectorAll("svg");
-
+const windTubine = document.querySelector("#WIND-TURBINE");
+const moon = document.querySelector("#MOON");
+const pizzaShip = document.querySelector("#PIZZA");
+const basketballPlanet = document.querySelector("#BASKETBALL_PLANET");
 //  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 //  -=-=-=-=-=-=-=-=-=-=-= NAV BAR NAVIGATION =-=-=-=-=-=-=-=-=-=-=-
@@ -182,5 +185,30 @@ homeNavIcons.forEach((icon) => {
     });
   }
 });
+
+//  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//  -=-=-=-=-=-=-=-=-=-=-= HOME - TEXT BOX - INFO =-=-=-=-=-=-=-=-=-=-=-
+document.querySelector(".home-main-text").style.opacity = 1;
+document.querySelector(".home-main-text").style.transform = "translateY(0)";
+
+[windTubine, moon, pizzaShip, basketballPlanet].forEach((item) => {
+  item.addEventListener("click", (e) => {
+    document.querySelector(`.${item.id}-text`).classList.toggle("class-hidden");
+    document.querySelector(`.${item.id}-text`).style.left = `${e.pageX}px`;
+    document.querySelector(`.${item.id}-text`).style.top = `${e.pageY}px`;
+  });
+
+  item.addEventListener("mouseleave", (e) => {
+    if (e.toElement.classList.contains("hidden-info-box")) return;
+    console.log("mouse out", e.toElement);
+
+    document.querySelector(`.${item.id}-text`).classList.add("class-hidden");
+  });
+});
+
+//  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//  -=-=-=-=-=-=-=-=-=-=-= HOME - LAZY LOADING =-=-=-=-=-=-=-=-=-=-=-
 
 //  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
