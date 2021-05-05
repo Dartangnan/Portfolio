@@ -1,6 +1,6 @@
 //  -=-=-=-=-=-=-=-=-=-=-= ELEMENTS SELECTION =-=-=-=-=-=-=-=-=-=-=-
 
-const navItems = document.querySelectorAll(".nav-items");
+const navItems = document.querySelector(".nav-items");
 const homeNavIcons = document
   .querySelector(".home-lower-container")
   .querySelectorAll("svg");
@@ -8,20 +8,21 @@ const windTubine = document.querySelector("#WIND-TURBINE");
 const moon = document.querySelector("#MOON");
 const pizzaShip = document.querySelector("#PIZZA");
 const basketballPlanet = document.querySelector("#BASKETBALL_PLANET");
+const leafyProject = document.querySelector(".leafyProject");
+const autoProject = document.querySelector(".autoProject");
+const donaProject = document.querySelector(".donaProject");
+const mimoProject = document.querySelector(".mimoProject");
+const barsNav = document.querySelector(".bars");
 //  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 //  -=-=-=-=-=-=-=-=-=-=-= NAV BAR NAVIGATION =-=-=-=-=-=-=-=-=-=-=-
 
-navItems.forEach((item) => {
-  item.addEventListener("click", (e) => {
-    console.log(`${e.target.innerText.toLowerCase().replaceAll(" ", "-")}`);
-    if (e.target.innerText.toLowerCase() === "resume") return;
-    document
-      .getElementById(
-        `${e.target.innerText.toLowerCase().replaceAll(" ", "-")}`
-      )
-      .scrollIntoView({ behavior: "smooth" });
-  });
+navItems.addEventListener("click", (e) => {
+  console.log(`${e.target.innerText.toLowerCase().replaceAll(" ", "-")}`);
+  if (e.target.innerText.toLowerCase() === "resume") return;
+  document
+    .getElementById(`${e.target.innerText.toLowerCase().replaceAll(" ", "-")}`)
+    .scrollIntoView({ behavior: "smooth" });
 });
 
 //  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -209,6 +210,73 @@ document.querySelector(".home-main-text").style.transform = "translateY(0)";
 
 //  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-//  -=-=-=-=-=-=-=-=-=-=-= HOME - LAZY LOADING =-=-=-=-=-=-=-=-=-=-=-
+//  -=-=-=-=-=-=-=-=-=-=-= ABOUT ME AND PROJECTS - LAZY LOADING =-=-=-=-=-=-=-=-=-=-=-
+const options = {
+  root: null,
+  threshold: 1,
+};
 
+let observer = new IntersectionObserver((entries, observer) => {
+  console.log(entries);
+  if (entries[0].intersectionRatio === 0) return;
+  console.log("dentro");
+  document.querySelector(".about-me-bg").classList.remove("left-hidden");
+  document.querySelector(".text-container").classList.remove("left-hidden");
+  document.querySelector(".tech-icons").classList.remove("right-hidden");
+}, options);
+
+observer.observe(document.querySelector(".about-me-title"));
 //  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+let projectObserver = new IntersectionObserver((entries, observer) => {
+  if (entries[0].intersectionRatio === 0) return;
+  console.log(entries);
+  entries[0].target.classList.remove("left-hidden");
+  entries[0].target.classList.remove("right-hidden");
+});
+
+const projects = [leafyProject, autoProject, donaProject, mimoProject];
+projects.forEach((item) => {
+  projectObserver.observe(item);
+});
+
+// --------------------------------------------------
+//
+
+barsNav.addEventListener("click", (e) => {
+  navItems.style.transition = "all 0.8s ease-out";
+  navItems.classList.toggle("hidden-nav");
+});
+
+document.querySelector("body").addEventListener("click", (e) => {
+  console.log(e.target);
+  if (e.target.classList.contains("fa-bars")) return;
+  navItems.classList.add("hidden-nav");
+});
+
+//
+let oldPosition = 0;
+let navHeight = 0;
+// --------------------------------------------------
+document.addEventListener("scroll", (e) => {
+  console.log(pageYOffset, oldPosition, pageYOffset - oldPosition);
+  if (innerWidth > 700) return;
+
+  if (pageYOffset - oldPosition > 0) {
+    oldPosition = pageYOffset;
+    if (navHeight <= -100) return;
+    document.querySelector("nav").style.transform = `translateY(${navHeight}%)`;
+    navHeight -= 10;
+  }
+
+  if (pageYOffset - oldPosition < 0) {
+    oldPosition = pageYOffset;
+    if (navHeight >= 10) return;
+    document.querySelector("nav").style.transform = `translateY(${navHeight}%)`;
+    navHeight += 10;
+  }
+
+  if (pageYOffset < 5) {
+    document.querySelector("nav").style.transform = `translateY(0%)`;
+  }
+});
