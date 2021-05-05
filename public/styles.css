@@ -395,14 +395,29 @@ nav {
 }
 
 .project-description-right {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 50px;
   padding-left: 50px;
   font-family: "Comfortaa";
   font-size: 16px;
   text-align: justify;
   text-indent: 35px;
+
+  width: 100%;
 }
 
 .project-description-left {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 50px;
+  width: 100%;
   padding-right: 50px;
   font-family: "Comfortaa";
   font-size: 16px;
@@ -412,6 +427,21 @@ nav {
 
 .project-image img {
   width: 275px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.tag {
+  color: white;
+  background-color: #a68cc4;
+  padding: 8px 10px;
+  border-radius: 50px;
+  text-indent: 0px;
+  margin-bottom: 5px;
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-= CONTACT ME =-=-=-=-=-=-=-=-=-=-=- */
@@ -632,6 +662,7 @@ textarea {
   }
 
   .project-description-left {
+    height: 100%;
     padding-right: 0px;
     padding: 0 30px 30px;
     padding-top: 30px;
