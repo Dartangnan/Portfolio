@@ -71,6 +71,44 @@ nav {
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-= HOME PAGE UPPER SECTION =-=-=-=-=-=-=-=-=-=-=- */
+.invisible {
+  display: none;
+}
+
+.grey-bg {
+  position: fixed;
+  background-color: gray;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.85;
+  z-index: 16;
+}
+
+.exit-btn {
+  position: fixed;
+  font-size: bold;
+  z-index: 18;
+  top: 15px;
+  right: 15px;
+  font-family: "Comfortaa";
+  color: white;
+  cursor: pointer;
+}
+
+.pic-frame {
+  position: fixed;
+  opacity: 1;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 17;
+}
+
+.pic-frame img {
+  width: 80%;
+}
 
 #home {
   position: relative;
@@ -81,7 +119,7 @@ nav {
 }
 
 .home-upper-container {
-  background: url("/public/portifolio_bg2.png") no-repeat;
+  background: url("portifolio_bg2.png") no-repeat;
   background-size: cover;
   background-position: 50%;
   position: relative;
@@ -344,7 +382,9 @@ nav {
 
   transition: all 1s ease-out;
 }
-
+.leafyProject {
+  display: none;
+}
 .single-project-right {
   display: flex;
   flex-flow: column;
@@ -442,6 +482,7 @@ nav {
   border-radius: 50px;
   text-indent: 0px;
   margin-bottom: 5px;
+  margin-left: 5px;
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-= CONTACT ME =-=-=-=-=-=-=-=-=-=-=- */
@@ -591,7 +632,7 @@ textarea {
 
 @media only screen and (max-width: 500px) {
   .home-upper-container {
-    background: url("/public/portifolio_bg_mobile.png") no-repeat;
+    background: url("portifolio_bg_mobile.png") no-repeat;
     background-size: cover;
     background-position: 50%;
     background-clip: content-box;
@@ -758,7 +799,7 @@ textarea {
   }
 
   .home-upper-container {
-    background: url("/public/portifolio_bg_mobile.png") no-repeat;
+    background: url("portifolio_bg_mobile.png") no-repeat;
     background-size: cover;
     background-size: 110% 110%;
     background-position: 50%;
@@ -936,7 +977,7 @@ textarea {
 
 @media only screen and (max-width: 400px) {
   .home-upper-container {
-    background: url("/public/portifolio_bg_mobile.png") no-repeat;
+    background: url("portifolio_bg_mobile.png") no-repeat;
     background-size: cover;
     background-position: 50%;
     height: 80vh;

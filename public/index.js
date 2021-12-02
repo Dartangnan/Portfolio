@@ -282,22 +282,59 @@ document.addEventListener("scroll", (e) => {
 });
 // --------------------------------------------------
 
-//  -=-=-=-=-=-=-=-=-=-=-= PROJECTS - ADDING THE FUNCTIONALITIES TO THE LINKS =-=-=-=-=-=-=-=-=-=-=-
+//  -=-=-=-=-=-=-=-=-=-=-= PROJECTS - ADDING THE FUNCTIONALITIES TO THE BUTTONS =-=-=-=-=-=-=-=-=-=-=-
+
+document.getElementById("eye_1_auto").addEventListener("click", (e) => {
+  window.open("https://documentfetcher.herokuapp.com/", "_blank");
+  return;
+});
+
+document.getElementById("eye_1_dona").addEventListener("click", (e) => {
+  window.open("https://donamoreira.herokuapp.com/", "_blank");
+  return;
+});
+
+document.getElementById("eye_1_mimo").addEventListener("click", (e) => {
+  window.open("https://studiomimo.herokuapp.com/", "_blank");
+  return;
+});
 
 document.getElementById("gitHubLink_1_auto").addEventListener("click", (e) => {
-  console.log("HEY");
   window.open("https://github.com/Dartangnan/onlineDocumentGatherer", "_blank");
   return;
 });
 
 document.getElementById("gitHubLink_1_dona").addEventListener("click", (e) => {
-  console.log("HEY");
   window.open("https://github.com/Dartangnan/ladingPageDonaMoreira", "_blank");
   return;
 });
 
 document.getElementById("gitHubLink_1_mimo").addEventListener("click", (e) => {
-  console.log("HEY");
   window.open("https://github.com/Dartangnan/studioMimo", "_blank");
   return;
 });
+
+document.getElementById("piic_1_auto").addEventListener("click", (e) => {
+  document.querySelector(".gallery-container").classList.remove("invisible");
+  document.querySelector(".img-gallery-main").src = "auto-img-xl.png";
+  return;
+});
+
+document.getElementById("piic_1_dona").addEventListener("click", (e) => {
+  document.querySelector(".gallery-container").classList.remove("invisible");
+  document.querySelector(".img-gallery-main").src = "dona-img-xl.png";
+  return;
+});
+
+document.getElementById("piic_1_mimo").addEventListener("click", (e) => {
+  document.querySelector(".gallery-container").classList.remove("invisible");
+  document.querySelector(".img-gallery-main").src = "mimo-img-xl.png";
+  return;
+});
+
+document.querySelector(".exit-btn").addEventListener("click", (e) => {
+  document.querySelector(".gallery-container").classList.add("invisible");
+  return;
+});
+
+// --------------------------------------------------
